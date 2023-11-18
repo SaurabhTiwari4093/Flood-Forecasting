@@ -211,7 +211,7 @@ h6 {
 
 #intro h2{
   font-weight: bold;
-  font-size: xx-large;
+  font-size: x-large;
   color: #413e66;
 }
 
@@ -970,14 +970,6 @@ h6 {
   transition: margin 0.2s;
   height: 40px;
   transition: height 0.4s;
-}
-
-#team .member:hover .member-info {
-  transition: 0.4s;
-}
-
-#team .member:hover .member-info-content {
-  height: 80px;
 }
 
 #team .member h4 {
