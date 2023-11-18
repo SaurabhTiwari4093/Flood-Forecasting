@@ -84,11 +84,11 @@ def get_predicts():
         for item in cities:
             if item['name'] == cityname:
                 item['sel'] = 'selected'
-        print(cityname)
+        # print(cityname)
         URL = "https://geocode.search.hereapi.com/v1/geocode"
         location = cityname
-        # Acquire from developer.here.com # myAPIKEY=ftKvGdH2ItSBc6N3Jbh4TzpH6F57uHHqw4Us4Uoj0HM
-        api_key = 'Bwv2FJJQHT4FTQBWFC7IEKRE49lNYtrAti6NK7uJVCY'
+        # Acquire from developer.here.com
+        api_key = 'ftKvGdH2ItSBc6N3Jbh4TzpH6F57uHHqw4Us4Uoj0HM'
         PARAMS = {'apikey': api_key, 'q': location}
         # sending get request and saving the response as response object
         r = requests.get(url=URL, params=PARAMS)
