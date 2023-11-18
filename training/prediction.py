@@ -1,13 +1,10 @@
-import csv
-import datetime
-import pickle
 import requests
 
 def get_data(lat, lon):
-    
-    
-    k = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/weatherdata/forecast?locations=" + str(lat) + "%2C%20" + str(lon) + "&aggregateHours=24&unitGroup=us&shortColumnNames=false&contentType=json&key=QG54K69BV36JZ7G6FD46BBY57"
+
+    k = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/weatherdata/forecast?locations=" + str(lat) + "%2C%20" + str(lon) + "&aggregateHours=24&unitGroup=us&shortColumnNames=false&contentType=json&key=XHWV4W6GK29MQK6J9BBM2GNKC"
     x = requests.get(k).json()['locations']
+
     for i in x:
         y = x[i]['values']
 
@@ -25,7 +22,7 @@ def get_data(lat, lon):
     final[2] /= 15
     final[3] /= 15
     final[5] /= 15
-
+    
     return final
 
 def testConnection():
