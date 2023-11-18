@@ -1,5 +1,5 @@
-# FloodML
-FloodML is a web application that uses Machine Learning to predict floods based on weather and and various historical data.
+# Flood Predictor
+Flood Predictor is a web application that uses Machine Learning to predict floods based on weather and and various historical data.
 
 
 ## Getting started
@@ -17,10 +17,10 @@ According to the World Resources Institute, over 80% of India's population, that
 
 Furthermore, climate change is increasing the risk of floods worldwide, particularly in coastal and low-lying areas, because of its role in extreme weather events and rising seas. The increase in temperatures that accompanies global warming can contribute to hurricanes that move more slowly and drop more rain, funneling moisture into atmospheric rivers like the ones that led to heavy rains and flooding in California in early 2019. Meanwhile, melting glaciers and other factors are contributing to a rise in sea levels that has created long-term, chronic flooding risks for places ranging from Venice, Italy to the Marshall Islands. As such, the risk and impact of floods is continuing to slope upwards.
 
-Our team wanted to help solve this problem, so we created FloodML, a web application to predict floods and their impact before they even happen. Then, we display this information in an interactive graphical format, making the information compelling and easy to understand for people and governments alike.
+Our team wanted to help solve this problem, so we created Flood Predictor, a web application to predict floods and their impact before they even happen. Then, we display this information in an interactive graphical format, making the information compelling and easy to understand for people and governments alike.
   
 ## What it does
-FloodML is our solution to floods in India. It is a web app that uses advanced machine learning algorithms to predict future floods based on weather forecast data – precipation, wind speed, humidity, temperature, maximum temperature, cloud cover – while allowing users to effectively visualize current and upcoming floods. The app has 4 core components:
+Flood Predictor is our solution to floods in India. It is a web app that uses advanced machine learning algorithms to predict future floods based on weather forecast data – precipation, wind speed, humidity, temperature, maximum temperature, cloud cover – while allowing users to effectively visualize current and upcoming floods. The app has 4 core components:
 
 #### 1. Plots
 The 3 visualizations on the plots page are bubble plots that display flood predictions, damage predictions, and heavy rainfall predictions across India, taking in factors such as precipation, wind speed, humidity, temperature, cloud cover, as well as previous data history. Plots:
@@ -62,7 +62,7 @@ We are extremely proud of compiling and creating a dataset that can accurately a
 ## What We learned
 First and foremost, we learned a great amount of web scraping and data mining, through our collection of data from websites as well as API's. We also learned techniques to manipulate and augment that data to create more effective datasets that provide us with better visualizations. Since it was our team's first time using Plotly, we also learned how to use plotly chart studio to create great visualizations. Lastly, we also expanded our machine learning skills through the testing of various models, especially the random forest classification model.
 
-## What's next for FloodML
+## What's next for Flood Predictor
 We would like to expand our web application to cover cities in countries all around the world, and to make our visualizations and predictions accessible to people across all nations, in an effort to prepare people and governments to the best of their ability.
 
 Our team also believes further scientific analysis of satellite data could help critically in flood detection. Thus, we would like to expand to create an image classification model to detect signs of upcoming floods from satellite images.
