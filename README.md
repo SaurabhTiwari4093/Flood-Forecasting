@@ -50,8 +50,8 @@ Our machine learning model is based on the python sci-kit learn library. We used
 #### Data Visualization
 We first obtained a dataset of the major cities and towns in India (around 200 of them) along with their latitude, longitude and population. We then obtained the numerous weather factors in each city using the weather API and ran the data into our machine learning model. Next, we plotted the data from the model on various different types of maps, using Plotly chart studio. The maps represent various data such as flood prediction, precipitation analysis, and damage estimates, in the form of scatter plots, heat-maps, and bubble plots. The damage estimates were calculated based on flood prediction and population. We also produced geo-referenced satellite images for various cities in India, based on retrieved data from NASA's Global Precipitation Measurement project.
 
-#### Front-end and hosting
-Our web app is based on the Flask python framework. We rendered HTML templates – with CSS for styling and Javascript for added functionality – and integrated it with our machine learning models and datasets via the flask back-end. We then used Heroku's hosting service to host our web application for everyone to try! 
+#### Front-end
+Our web app is based on the Flask python framework. We rendered HTML templates – with CSS for styling and Javascript for added functionality – and integrated it with our machine learning models and datasets via the flask back-end.
 
 ## Challenges We ran into
 Our biggest challenge was in mining and collecting data to build our models and data visualizations. Given the extremely limited existing data available for floods and water related factors in India, scraping quality data was a challenge. We used a combination of weather API's and scraping techniques to create and compile an accurate and effective dataset. We also struggled with integrating the plots with our web app application, being our first time working with Plotly. Lastly, we faced a lot of git merge conflict issues due to different encodings of csv files and pickle versions across different computer platforms.

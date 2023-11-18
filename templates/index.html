@@ -4,8 +4,17 @@
     <meta charset="utf-8" />
     <title>Flood Predictor</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="" name="keywords" />
-    <meta content="" name="description" />
+    <meta
+      content="Flood Predictor,Machine Learning,Data Visualization"
+      name="keywords"
+    />
+    <meta
+      content="Flood Predictor is a tool that uses
+    Machine Learning and Data Visualization to show you
+    plots and heatmaps with realtime flood information, as well
+    locational predictions about future floods and potential damage."
+      name="description"
+    />
 
     <!-- Favicons -->
     <link href="{{ url_for('static', filename='img/logo.png') }}" rel="icon" />
@@ -56,23 +65,8 @@
   Header
   ============================-->
     <header id="header">
-      <div id="topbar">
-        <div class="container">
-          <div class="social-links">
-            <!-- <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-            <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-            <a href="#" class="instagram"><i class="fa fa-instagram"></i></a> -->
-          </div>
-        </div>
-      </div>
-
       <div class="container">
         <div class="logo float-left">
-          <!-- Uncomment below if you prefer to use an image logo -->
-          <!-- <h1 class="text-light">
-            <a href="#intro" class="scrollto"><span>Flood Predictor</span></a>
-          </h1> -->
           <a href="#header" class="scrollto"
             ><img
               style="margin-top: -5px; min-height: 50px"
@@ -91,7 +85,6 @@
             <li><a href="predicts.html">Predict</a></li>
           </ul>
         </nav>
-        <!-- .main-nav -->
       </div>
     </header>
     <!-- #header -->
@@ -101,7 +94,7 @@
   ============================-->
     <section id="intro">
       <div
-        class="container d-flex justify-content-center align-items-center h-100 text-center"
+        class="container d-flex justify-content-center align-items-center h-100 text-center px-4"
       >
         <div>
           <a href="#header" class="scrollto"
@@ -112,10 +105,10 @@
             />
           </a>
           <h2 class="my-4">
-            Flood Predictor is a tool that uses <span>Machine Learning and Data
-            Visualization</span> to show you plots and heatmaps with realtime flood
-            information, as well locational predictions about future floods and
-            potential damage.
+            Flood Predictor is a tool that uses
+            <span>Machine Learning and Data Visualization</span> to show you
+            plots and heatmaps with realtime flood information, as well
+            locational predictions about future floods and potential damage.
           </h2>
           <a href="#about" class="scrollto btn-get-started mt-2">Get Started</a>
         </div>
@@ -301,39 +294,12 @@
       </section>
 
       <!--==========================
-      Call To Action Section
-    ============================-->
-      <!-- <section id="call-to-action" class="wow fadeInUp">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-9 text-center text-lg-left">
-              <h3 class="cta-title">Call To Action</h3>
-              <p class="cta-text">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat non proident, sunt in culpa qui officia deserunt
-                mollit anim id est laborum.
-              </p>
-            </div>
-            <div class="col-lg-3 cta-btn-container text-center">
-              <a class="cta-btn align-middle" href="#">Call To Action</a>
-            </div>
-          </div>
-        </div>
-      </section> -->
-      <!-- #call-to-action -->
-
-      <!--==========================
       Team Section
     ============================-->
-      <section id="team" class="section-bg">
+      <section id="team" class="section-bg px-4">
         <div class="container">
           <div class="section-header">
             <h3>Team</h3>
-            <p>
-              <!-- Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque -->
-            </p>
           </div>
 
           <div class="row d-flex justify-content-center">
@@ -453,11 +419,11 @@
                   prediction and population. We also plotted it on satellite
                   images.<br />
                   <br />
-                  <b>FRONT-END AND HOSTING</b><br />
+                  <b>FRONT-END</b><br />
                   <br />
                   Our web app is based on the flask python framework. We
                   rendered HTML templates on top of this flask back-end, and
-                  styled it using CSS. Our web app is hosted via Heroku.<br />
+                  styled it using CSS.<br />
                   <br />
                 </p>
               </div>
@@ -503,100 +469,7 @@
       <!-- #faq -->
     </main>
 
-    <!--==========================
-    Footer
-  ============================-->
-    <footer id="footer" class="section-bg" style="background-color: #f5f8fd">
-      <div class="footer-top">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="row">
-                <div class="col-sm-11">
-                  <div class="footer-info">
-                    <!-- <h3>Flood Predictor</h3> -->
-                    <a href="index.html" class="scrollto"
-                      ><img
-                        style="margin-top: 0px; max-height: 100px"
-                        src="{{ url_for('static', filename='img/logo.png') }}"
-                        alt=""
-                        class="img-fluid"
-                    /></a>
-                    <p style="padding-top: 20px">
-                      Flood Predictor is a tool that uses Machine Learning and
-                      Data Visualization to show you plots and heatmaps with
-                      realtime flood information, as well locational predictions
-                      about future floods and potential damage.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-6">
-              <div class="form">
-                <h4>Send us a message</h4>
-
-                <form action="" method="post" role="form" class="contactForm">
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      name="name"
-                      class="form-control"
-                      id="name"
-                      placeholder="Your Name"
-                      data-rule="minlen:4"
-                      data-msg="Please enter at least 4 chars"
-                    />
-                    <div class="validation"></div>
-                  </div>
-                  <div class="form-group">
-                    <input
-                      type="email"
-                      class="form-control"
-                      name="email"
-                      id="email"
-                      placeholder="Your Email"
-                      data-rule="email"
-                      data-msg="Please enter a valid email"
-                    />
-                    <div class="validation"></div>
-                  </div>
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      class="form-control"
-                      name="subject"
-                      id="subject"
-                      placeholder="Subject"
-                      data-rule="minlen:4"
-                      data-msg="Please enter at least 8 chars of subject"
-                    />
-                    <div class="validation"></div>
-                  </div>
-
-                  <div id="sendmessage">
-                    Your message has been sent. Thank you!
-                  </div>
-                  <div id="errormessage"></div>
-
-                  <div class="text-center">
-                    <button type="submit" title="Send Message">
-                      Send Message
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- #footer -->
-
     <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-    <!-- Uncomment below i you want to use a preloader -->
-    <!-- <div id="preloader"></div> -->
 
     <!-- JavaScript Libraries -->
     <script src="{{ url_for('static', filename='lib/jquery/jquery.min.js') }}"></script>
@@ -610,8 +483,6 @@
     <script src="{{ url_for('static', filename='lib/owlcarousel/owl.carousel.min.js') }}"></script>
     <script src="{{ url_for('static', filename='lib/isotope/isotope.pkgd.min.js') }}"></script>
     <script src="{{ url_for('static', filename='lib/lightbox/js/lightbox.min.js') }}"></script>
-    <!-- Contact Form JavaScript File -->
-    <script src="{{ url_for('static', filename='contactform/contactform.js') }}"></script>
 
     <!-- Template Main Javascript File -->
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
