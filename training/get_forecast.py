@@ -1,6 +1,4 @@
 import csv
-import datetime
-import pickle
 import requests
 
 def get_data(lat, lon):
