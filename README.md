@@ -63,8 +63,12 @@ We are extremely proud of compiling and creating a dataset that can accurately a
 First and foremost, we learned a great amount of web scraping and data mining, through our collection of data from websites as well as API's. We also learned techniques to manipulate and augment that data to create more effective datasets that provide us with better visualizations. Since it was our team's first time using Plotly, we also learned how to use plotly chart studio to create great visualizations. Lastly, we also expanded our machine learning skills through the testing of various models, especially the random forest classification model.
 
 ## What's next for Flood Predictor
+Expand our web application to develop plots dynamical.
+
 We would like to expand our web application to cover cities in countries all around the world, and to make our visualizations and predictions accessible to people across all nations, in an effort to prepare people and governments to the best of their ability.
 
 Our team also believes further scientific analysis of satellite data could help critically in flood detection. Thus, we would like to expand to create an image classification model to detect signs of upcoming floods from satellite images.
 
+
+## 
 Most importantly, our team is proud to have created a web application that could potentially help people and governments prepare for and reallocate resources for floods, potentially saving thousands of lives and millions of livelihoods.
