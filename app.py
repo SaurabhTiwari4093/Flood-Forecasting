@@ -1,6 +1,5 @@
-"""Web app."""
 import flask
-from flask import Flask, render_template, request, redirect, url_for
+from flask import render_template, request
 
 import pickle
 import base64
