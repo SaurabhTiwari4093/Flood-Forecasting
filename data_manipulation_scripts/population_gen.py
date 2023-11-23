@@ -17,7 +17,7 @@ csv_file = "finalfinal.csv"
 with open(csv_file, 'r') as f:
     reader = csv.reader(f)
     header = next(reader)
-    header.append("pop")  # Add "pop" to the existing header
+    header.append("population")  # Add "pop" to the existing header
 
     for row in reader:
         if row[0] != "city":
