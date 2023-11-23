@@ -2,7 +2,7 @@ import requests
 import json
 import csv
 
-population = []
+population_data = []
 
 def get_city_opendata(city, country):
     tmp = 'https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/geonames-all-cities-with-a-population-500/records?refine=country:%s&refine=ascii_name:%s'
@@ -16,21 +16,27 @@ csv_file = "finalfinal.csv"
 
 with open(csv_file, 'r') as f:
     reader = csv.reader(f)
+    header = next(reader)
+    header.append("pop")  # Add "pop" to the existing header
+
     for row in reader:
         if row[0] != "city":
-            # print(row[0])
             try:
                 pop = get_city_opendata(row[0], 'India')
-                population.append(pop)
+                row.append(pop)
+                population_data.append(row)
             except:
                 print("error in", row[0])
-                population.append(0)
+                row.append(0)
+                population_data.append(row)
 
-# population = [1,2,3,4,5,6,7,8]
 
-with open('pop.csv', 'w') as f:
+with open('finalfinal.csv', 'w', newline='') as f:
     writer = csv.writer(f)
-    for val in population:
-        writer.writerow([val])
+    writer.writerow(header)  # Write the updated header
+    for row in population_data:
+        writer.writerow(row)
 
-# Corrected some spelling and add some populations in the csv file manually
+
+
+# Also corrected some cities spelling and manually added population
