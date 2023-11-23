@@ -2,7 +2,9 @@ def process(k):
     final = ""
 
     for i in k:
-        if i == "ā":
+        if i=="Ā":
+            final += "A"
+        elif i == "ā":
             final += "a"
         elif i == "ē":
             final += "e"
