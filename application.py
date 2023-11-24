@@ -5,7 +5,7 @@ import pickle
 import base64
 from training import prediction
 import requests
-app = flask.Flask(__name__)
+application = flask.Flask(__name__)
 
 data = [{'name': 'Delhi', "sel": "selected"}, {'name': 'Mumbai', "sel": ""}, {
     'name': 'Kolkata', "sel": ""}, {'name': 'Bangalore', "sel": ""}, {'name': 'Chennai', "sel": ""}]
@@ -18,24 +18,24 @@ cities = [{'name': 'Delhi', "sel": "selected"}, {'name': 'Mumbai', "sel": ""}, {
 model = pickle.load(open("model.pickle", 'rb'))
 
 
-@app.route("/")
-@app.route('/index.html')
+@application.route("/")
+@application.route('/index.html')
 def index() -> str:
     """Base page."""
     return flask.render_template("index.html")
 
 
-@app.route('/plots.html')
+@application.route('/plots.html')
 def plots():
     return render_template('plots.html')
 
 
-@app.route('/heatmaps.html')
+@application.route('/heatmaps.html')
 def heatmaps():
     return render_template('heatmaps.html')
 
 
-@app.route('/satellite.html')
+@application.route('/satellite.html')
 def satellite():
     direc = "processed_satellite_images/Delhi_July.png"
     with open(direc, "rb") as image_file:
@@ -44,7 +44,7 @@ def satellite():
     return render_template('satellite.html', data=data, image_file=image, months=months, text="Delhi in January 2020")
 
 
-@app.route('/satellite.html', methods=['GET', 'POST'])
+@application.route('/satellite.html', methods=['GET', 'POST'])
 def satelliteimages():
     place = request.form.get('place')
     date = request.form.get('date')
@@ -69,12 +69,12 @@ def satelliteimages():
     return render_template('satellite.html', data=data, image_file=image, months=months, text=text)
 
 
-@app.route('/predicts.html')
+@application.route('/predicts.html')
 def predicts():
     return render_template('predicts.html', cities=cities, cityname="Information about the city")
 
 
-@app.route('/predicts.html', methods=["GET", "POST"])
+@application.route('/predicts.html', methods=["GET", "POST"])
 def get_predicts():
     try:
         cityname = request.form["city"]
@@ -108,4 +108,4 @@ def get_predicts():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    application.run(debug=True)
