@@ -6,7 +6,7 @@ Flood Predictor is a web application that uses Machine Learning to predict flood
 - Clone the project and install dependencies
 - Activate virtual environment
 - run pip install -r requirements.txt
-- run python app.py
+- run python application.py
 - You're Done!
 
 
