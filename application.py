@@ -2,18 +2,10 @@ import flask
 from flask import render_template, request
 
 import pickle
-import base64
 from training import prediction
 import requests
 application = flask.Flask(__name__)
 
-data = [{'name': 'Delhi', "sel": "selected"}, {'name': 'Mumbai', "sel": ""}, {
-    'name': 'Kolkata', "sel": ""}, {'name': 'Bangalore', "sel": ""}, {'name': 'Chennai', "sel": ""}]
-# data = [{'name':'India', "sel": ""}]
-months = [{"name": "May", "sel": ""}, {"name": "June",
-                                       "sel": ""}, {"name": "July", "sel": "selected"}]
-cities = [{'name': 'Delhi', "sel": "selected"}, {'name': 'Mumbai', "sel": ""}, {'name': 'Kolkata', "sel": ""}, {'name': 'Bangalore', "sel": ""}, {'name': 'Chennai', "sel": ""}, {
-    'name': 'New York', "sel": ""}, {'name': 'Los Angeles', "sel": ""}, {'name': 'London', "sel": ""}, {'name': 'Paris', "sel": ""}, {'name': 'Sydney', "sel": ""}, {'name': 'Beijing', "sel": ""}]
 
 model = pickle.load(open("model.pickle", 'rb'))
 
@@ -37,18 +29,13 @@ def heatmaps():
 
 @application.route('/predicts.html')
 def predicts():
-    return render_template('predicts.html', cities=cities, cityname="Information about the city")
+    return render_template('predicts.html', cityname="Information about the city")
 
 
 @application.route('/predicts.html', methods=["GET", "POST"])
 def get_predicts():
     try:
         cityname = request.form["city"]
-        cities = [{'name': 'Delhi', "sel": ""}, {'name': 'Mumbai', "sel": ""}, {'name': 'Kolkata', "sel": ""}, {'name': 'Bangalore', "sel": ""}, {'name': 'Chennai', "sel": ""}, {
-            'name': 'New York', "sel": ""}, {'name': 'Los Angeles', "sel": ""}, {'name': 'London', "sel": ""}, {'name': 'Paris', "sel": ""}, {'name': 'Sydney', "sel": ""}, {'name': 'Beijing', "sel": ""}]
-        for item in cities:
-            if item['name'] == cityname:
-                item['sel'] = 'selected'
         # print(cityname)
         URL = "https://geocode.search.hereapi.com/v1/geocode"
         location = cityname
@@ -68,9 +55,9 @@ def get_predicts():
         else:
             pred = "Unsafe"
 
-        return render_template('predicts.html', cityname="Information about " + cityname, cities=cities, temp=round(final[0], 2), maxt=round(final[1], 2), wspd=round(final[2], 2), cloudcover=round(final[3], 2), percip=round(final[4], 2), humidity=round(final[5], 2), pred=pred)
+        return render_template('predicts.html', cityname="Information about " + cityname, temp=round(final[0], 2), maxt=round(final[1], 2), wspd=round(final[2], 2), cloudcover=round(final[3], 2), percip=round(final[4], 2), humidity=round(final[5], 2), pred=pred)
     except:
-        return render_template('predicts.html', cities=cities, cityname="Oops, we weren't able to retrieve data for that city.")
+        return render_template('predicts.html', cityname="Oops, we weren't able to retrieve data for that city.")
 
 
 if __name__ == "__main__":
